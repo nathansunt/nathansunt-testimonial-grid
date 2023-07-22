@@ -1,0 +1,167 @@
+body{
+  background-color: hsl(210, 46%, 95%);
+  font-family: Barlow Semi Condensed;
+  color: hsl(0, 0%, 100%);
+  padding: 3rem 1rem;
+  font-size: 0.813rem;
+}
+
+main{
+  display: grid;
+  gap: 1.5rem;
+}
+
+.card1{
+  background-image: url("images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  justify-self: end;
+  background-position-x: 12.438rem;
+}
+
+.card1, .card2, .card3,
+.card4, .card5{
+  display: grid;
+  grid-template-columns: .2fr 1fr;
+  grid-template-rows: .1fr .2fr 1fr;
+  grid-template-areas:
+  "image name"
+  "review review"
+  "personal-note personal-note";
+  padding: 1.813rem 2.125rem;
+  border-radius: .5rem;
+}
+
+.image, .image2, .image3{
+  width: 1.75rem;
+  border-radius: 1.5rem;
+}
+
+.image2{
+  border-style: solid;
+  border-width: 2px;
+  border-color: hsl(0, 0%, 100%, 0.5);
+}
+
+.image3{
+  border-style: solid;
+  border-width: 2px;
+  border-color: hsl(263, 55%, 52%);
+}
+
+.review, .review2{
+  grid-area: review;
+}
+
+.personal-note, .personal-note2{
+  grid-area: personal-note;
+}
+
+.card1{
+  background-color: hsl(263, 55%, 52%);
+}
+
+.card2{
+  background-color: hsl(217, 19%, 35%);
+}
+
+.card3, .card5{
+  background-color: hsl(0, 0%, 100%);
+}
+
+.card4{
+  background-color: hsl(219, 29%, 14%);
+}
+
+.status{
+  color: hsl(0, 0%, 100%, 0.5);
+}
+
+.personal-note{
+  color: hsl(0, 0%, 100%, 0.7);
+}
+
+.status2{
+  color: hsl(217, 19%, 35%, 0.5);
+}
+
+.personal-note2{
+  color: hsl(217, 19%, 35%, 0.7);
+}
+
+.name2{
+  color: hsl(217, 19%, 35%);
+}
+
+.review2{
+  color: hsl(217, 19%, 35%);
+}
+
+.name, .name2, .status,
+.status2{
+  margin: 0;
+}
+
+.status, .status2{
+  font-size: 0.688rem;
+}
+
+.review, .review2{
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem; 
+}
+
+.personal-note, .personal-note2{
+  line-height: 1.125rem;
+  margin: 0;
+}
+
+@media (min-width:1024px){
+  main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "daniel daniel jonathan kira"
+    "jeanette patrick patrick kira";
+    padding: 3rem;
+  }
+
+  .card1{
+    grid-area: daniel;
+    background-position-x: 28rem;
+  }
+
+  .card2{
+    grid-area: jonathan;
+  }
+
+  .card3{
+    grid-area: jeanette;
+  }
+
+  .card4{
+    grid-area: patrick;
+  }
+
+  .card5{
+    grid-area: kira;
+  }
+
+  .card1, .card4{
+    display: grid;
+    grid-template-columns: .1fr .9fr;
+    grid-template-rows: .1fr .5fr 1fr;
+  }
+
+  .review, .review2{
+    font-size: 1.438rem;
+  }
+
+  .personal-note, .personal-note2{
+    font-size: 0.938rem;
+    line-height: 1.25rem;
+    margin-top: .25rem;
+    margin-bottom: .25rem;
+  }
+}
